@@ -45,3 +45,16 @@ mv sg.tf modules/SECURITY
 ```
 mv asg-bastion-nginx.tf asg-webserver.tf bastion.sh nginx.sh tooling.sh wordpress.sh modules/ASG
 ```
+
+### In the root, we create providers.tf and cut the provider function from the former main.tf now in modules/VPC/main.tf
+
+```
+touch providers.fs
+```
+### paste the snippet below into it
+
+```
+provider "aws" {
+  region = var.region
+}
+```
