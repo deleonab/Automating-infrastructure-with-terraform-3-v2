@@ -24,3 +24,8 @@ cd modules
 ```
 mv internet-gw.tf nat-gw.tf main.tf roles.tf routes.tf modules/VPC
 ```
+
+### I moved rds.tf to modules/RDS
+```
+mv rds.tf modules/RDS
+```
