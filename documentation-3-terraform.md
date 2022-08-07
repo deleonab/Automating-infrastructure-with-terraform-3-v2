@@ -18,4 +18,4 @@ cd modules
 - EFS   For Elastic File System
 - RDS    For Database
 - COMPUTE   For compute
-- SECURITY
+- SECURITY For security groups
