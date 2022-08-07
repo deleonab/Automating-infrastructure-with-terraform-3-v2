@@ -29,3 +29,7 @@ mv internet-gw.tf nat-gw.tf main.tf roles.tf routes.tf modules/VPC
 ```
 mv rds.tf modules/RDS
 ```
+### Next I moved alb.tf , cert.tf, output.tf to modules/ALB
+```
+mv alb.tf certificate.tf output.tf modules/ALB
+```
