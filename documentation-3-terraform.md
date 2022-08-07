@@ -37,3 +37,7 @@ mv alb.tf certificate.tf output.tf modules/ALB
 ```
 mv efs.tf modules/EFS
 ```
+### Then i moved sg.tf to modules/SECURITY
+```
+mv sg.tf modules/SECURITY
+```
