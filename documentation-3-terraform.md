@@ -19,3 +19,8 @@ cd modules
 - RDS    For Database
 - COMPUTE   For compute
 - SECURITY For security groups
+
+### I moved network files to modules/VPC
+```
+mv internet-gw.tf nat-gw.tf main.tf roles.tf routes.tf modules/VPC
+```
