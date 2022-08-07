@@ -12,7 +12,7 @@ Then change directory to the module directory
 cd modules
 ```
 ### inside the module directory, I created the following files to keep our code well structured and modular
-- VPC     For networking   NAT gateway (nat-gw.tf), Internet Gateway(internet-gw.tf), Routes, Roles, main,tf
+- VPC     For networking   NAT gateway (nat-gw.tf), Internet Gateway(internet-gw.tf), Routes (routes.tf), Roles, main,tf
 - ALB     For Load balancer
 - AS  For Autoscaling groups
 - EFS   For Elastic File System
