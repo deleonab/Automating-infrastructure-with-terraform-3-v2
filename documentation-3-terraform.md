@@ -41,3 +41,7 @@ mv efs.tf modules/EFS
 ```
 mv sg.tf modules/SECURITY
 ```
+### Next I moved mv asg-bastion-nginx.tf asg-webserver.tf bastion.sh nginx.sh tooling.sh wordpress.sh to modules/ASG
+```
+mv asg-bastion-nginx.tf asg-webserver.tf bastion.sh nginx.sh tooling.sh wordpress.sh modules/ASG
+```
