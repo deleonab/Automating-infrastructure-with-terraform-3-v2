@@ -33,3 +33,7 @@ mv rds.tf modules/RDS
 ```
 mv alb.tf certificate.tf output.tf modules/ALB
 ```
+### I moved efs.tf to modules/EFS
+```
+mv efs.tf modules/EFS
+```
