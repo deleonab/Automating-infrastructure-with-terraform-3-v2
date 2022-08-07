@@ -58,3 +58,13 @@ provider "aws" {
   region = var.region
 }
 ```
+
+### Each module must have a variables.tf file
+```
+touch 
+touch
+touch
+touch
+touch
+touch
+```
