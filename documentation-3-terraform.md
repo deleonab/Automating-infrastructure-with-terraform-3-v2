@@ -71,3 +71,26 @@ cd modules/ASG && touch variables.tf
 ```
 ### Variables.tf successfuly created in all modules
 
+### Each module must have a main.tf file
+```
+cd modules/VPC && touch main.tf 
+cd modules/ALB && touch main.tf
+cd modules/COMPUTE && touch main.tf
+cd modules/EFS && touch main.tf
+cd modules/RDS && touch main.tf
+cd modules/SECURITY && touch mains.tf
+cd modules/ASG && touch main.tf
+```
+### Variables.tf successfuly created in all modules
+
+### Each module must have a output.tf file
+```
+cd modules/VPC && touch output.tf 
+cd modules/ALB && touch output.tf
+cd modules/COMPUTE && touch output.tf
+cd modules/EFS && touch output.tf
+cd modules/RDS && touch output.tf
+cd modules/SECURITY && touch output.tf
+cd modules/ASG && touch output.tf
+```
+### Variables.tf successfuly created in all modules
