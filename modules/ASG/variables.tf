@@ -37,3 +37,18 @@ variable "wordpress-alb-tgt" {
   type        = string
   description = "wordpress target group"
 }
+
+variable "ami-bastion" {
+  type        = string
+  description = "ami for bastion"
+}
+
+variable "instance_profile" {
+  type        = string
+  description = "Instance profile for launch template"
+}
+
+variable "bastion-sg" {
+  type = list
+  description = "security group for bastion"
+}
