@@ -23,3 +23,8 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "public_subnets" {
+  type = list
+  description = "Seconf subnet for ecternal ALB"
+}
