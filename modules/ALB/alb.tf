@@ -1,7 +1,7 @@
 # We need to create an ALB to balance the traffic between the Instances:
 
 resource "aws_lb" "ext-alb" {
-  name     = "ext-alb"
+  name     = var.name
   internal = false
   security_groups = [
     aws_security_group.ext-alb-sg.id,
@@ -15,7 +15,7 @@ resource "aws_lb" "ext-alb" {
    tags = merge(
     var.tags,
     {
-      Name = "ACS-ext-alb"
+      Name = var.name
     },
   )
 
