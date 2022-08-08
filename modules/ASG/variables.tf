@@ -52,3 +52,13 @@ variable "bastion-sg" {
   type = list
   description = "security group for bastion"
 }
+
+variable "nginx-sg" {
+  type = list
+  description = "security group for nginx"
+}
+
+variable "ami-nginx" {
+  type        = string
+  description = "ami for nginx"
+}
