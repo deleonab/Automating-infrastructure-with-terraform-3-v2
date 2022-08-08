@@ -3,15 +3,9 @@
 resource "aws_lb" "ext-alb" {
   name     = var.name
   internal = false
-  security_groups = [
-    aws_security_group.ext-alb-sg.id,
-  ]
-# security_groups = [var.ext-alb.sg]
-  subnets = [
-    aws_subnet.public[0].id,
-    aws_subnet.public[1].id
-  ]
-# subnets = [var.pub-sub-1, var.pub-sub-2]
+  security_groups = [var.public-sg]
+
+  subnets = [var.public-sbn-1, var.public-sbn-2]
    tags = merge(
     var.tags,
     {
@@ -40,7 +34,7 @@ resource "aws_lb_target_group" "nginx-tgt" {
   port        = 443
   protocol    = "HTTPS"
   target_type = "instance"
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = var.vpc_id
 }
 
 
@@ -70,7 +64,7 @@ resource "aws_lb" "ialb" {
   name     = "ialb"
   internal = true
   security_groups = [
-    aws_security_group.int-alb-sg.id,
+    var.private
   ]
 
   subnets = [
