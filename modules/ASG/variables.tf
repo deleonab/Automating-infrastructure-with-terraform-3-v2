@@ -28,3 +28,7 @@ variable "public_subnets" {
   type = list
   description = "Seconf subnet for ecternal ALB"
 }
+variable "tooling-alb-tgt" {
+  type        = string
+  description = "tooling target group"
+}
