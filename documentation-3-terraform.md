@@ -15,7 +15,7 @@ cd modules
 - VPC     For networking   NAT gateway (nat-gw.tf), Internet Gateway(internet-gw.tf), Routes (routes.tf), Roles (roles.tf), main,tf with the vpc and subnets(main.tf)
 - ALB     For Load balancer
 - AS  For Autoscaling groups
-- EFS   For Elastic File System
+- EFS   For Elastic File System resources
 - RDS    For Database
 - COMPUTE   For compute
 - SECURITY For security groups
