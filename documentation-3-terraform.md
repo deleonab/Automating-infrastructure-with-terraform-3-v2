@@ -18,7 +18,7 @@ cd modules
 - EFS   For Elastic File System resources
 - RDS    For Database
 - COMPUTE   For EC2 and related resources
-- SECURITY For security groups
+- SECURITY For security group resources
 
 ### I moved network files to modules/VPC
 ```
