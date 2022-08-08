@@ -6,12 +6,12 @@ resource "aws_lb" "ext-alb" {
   security_groups = [
     aws_security_group.ext-alb-sg.id,
   ]
-
+# security_groups = [var.ext-alb.sg]
   subnets = [
     aws_subnet.public[0].id,
     aws_subnet.public[1].id
   ]
-
+# subnets = [var.pub-sub-1, var.pub-sub-2]
    tags = merge(
     var.tags,
     {
@@ -20,7 +20,9 @@ resource "aws_lb" "ext-alb" {
   )
 
   ip_address_type    = "ipv4"
+  # ip_address_type    = var.ip_address_type
   load_balancer_type = "application"
+  # load_balancer_type = var.load_balancer_type
 }
 
 # We need to inform the ALB of where where route the traffic.  We need to create a Target Group for our load balancer
