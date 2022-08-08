@@ -13,3 +13,7 @@ variable "desired_capacity" {
   description = "Desired number of instance in autoscaling group"
 
 }
+variable "keypair" {
+  type        = string
+  description = "Keypair for instances"
+}
