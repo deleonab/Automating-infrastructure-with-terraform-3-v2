@@ -69,10 +69,7 @@ resource "aws_autoscaling_group" "bastion-asg" {
   health_check_type         = "ELB"
   desired_capacity          = var.desired_capacity
 
-  vpc_zone_identifier = [
-    aws_subnet.public[0].id,
-    aws_subnet.public[1].id
-  ]
+  vpc_zone_identifier = var.public_subnets
 
   launch_template {
     id      = aws_launch_template.bastion-launch-template.id
@@ -125,16 +122,13 @@ resource "aws_launch_template" "nginx-launch-template" {
 
 resource "aws_autoscaling_group" "nginx-asg" {
   name                      = "nginx-asg"
-  max_size                  = var.max_size
-  min_size                  = var.min_size
+  max_size                  = 2
+  min_size                  = 2
   health_check_grace_period = 300
   health_check_type         = "ELB"
-  desired_capacity          = var.desired_capacity
+  desired_capacity          = 1
 
-  vpc_zone_identifier = [
-    aws_subnet.public[0].id,
-    aws_subnet.public[1].id
-  ]
+  vpc_zone_identifier = var.public_subnets
 
   launch_template {
     id      = aws_launch_template.nginx-launch-template.id

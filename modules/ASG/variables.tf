@@ -62,3 +62,8 @@ variable "ami-nginx" {
   type        = string
   description = "ami for nginx"
 }
+
+variable "private_subnets" {
+  type = list
+  description = "first private subnets for internal ALB"
+}
