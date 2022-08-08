@@ -19,10 +19,8 @@ resource "aws_lb" "ext-alb" {
     },
   )
 
-  ip_address_type    = "ipv4"
-  # ip_address_type    = var.ip_address_type
-  load_balancer_type = "application"
-  # load_balancer_type = var.load_balancer_type
+  ip_address_type    = var.ip_address_type
+  load_balancer_type = var.load_balancer_type
 }
 
 # We need to inform the ALB of where where route the traffic.  We need to create a Target Group for our load balancer
