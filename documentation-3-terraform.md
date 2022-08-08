@@ -94,8 +94,12 @@ cd modules/SECURITY && touch output.tf
 cd modules/ASG && touch output.tf
 ```
 ### Variables.tf successfuly created in all modules
+# In module/ALB
+```
 
-## In modules/ALB/output.tf
+```
+### In alb.tf
+### output.tf
 ```
 # I addedd the following outputs to output.tf to print them on screen
 
