@@ -17,7 +17,7 @@ cd modules
 - AS  For Autoscaling and launch template resources
 - EFS   For Elastic File System resources
 - RDS    For Database
-- COMPUTE   For compute
+- COMPUTE   For EC2 and related resources
 - SECURITY For security groups
 
 ### I moved network files to modules/VPC
