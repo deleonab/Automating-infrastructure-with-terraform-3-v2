@@ -32,3 +32,8 @@ variable "tooling-alb-tgt" {
   type        = string
   description = "tooling target group"
 }
+
+variable "wordpress-alb-tgt" {
+  type        = string
+  description = "wordpress target group"
+}
