@@ -13,7 +13,7 @@ cd modules
 ```
 ### inside the module directory, I created the following files to keep our code well structured and modular
 - VPC     For networking   NAT gateway (nat-gw.tf), Internet Gateway(internet-gw.tf), Routes (routes.tf), Roles (roles.tf), main,tf with the vpc and subnets(main.tf)
-- ALB     For Load balancer
+- ALB     For Load balancer resources
 - AS  For Autoscaling groups
 - EFS   For Elastic File System resources
 - RDS    For Database
