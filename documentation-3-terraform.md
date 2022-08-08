@@ -61,10 +61,13 @@ provider "aws" {
 
 ### Each module must have a variables.tf file
 ```
-touch 
-touch
-touch
-touch
-touch
-touch
+cd modules/VPC && touch variables.tf 
+cd modules/ALB && touch variables.tf
+cd modules/COMPUTE && touch variables.tf
+cd modules/EFS && touch variables.tf
+cd modules/RDS && touch variables.tf
+cd modules/SECURITY && touch variables.tf
+cd modules/ASG && touch variables.tf
 ```
+### Variables.tf successfuly created in all modules
+
