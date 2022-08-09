@@ -6,14 +6,6 @@ variable "vpc_cidr" {
 }
 
 variable "enable_dns_support" {
-variable "region" {
-}
-
-variable "vpc_cidr" {
-  type = string
-}
-
-variable "enable_dns_support" {
   type = bool
 }
 
@@ -59,5 +51,4 @@ variable "name" {
 variable "environment" {
   default = "true"
 }
-
 
