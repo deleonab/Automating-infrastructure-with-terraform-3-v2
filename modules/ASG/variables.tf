@@ -38,6 +38,11 @@ variable "wordpress-alb-tgt" {
   description = "wordpress target group"
 }
 
+variable "nginx-alb-tgt" {
+  type        = string
+  description = "nginx reverse proxy target group"
+}
+
 variable "ami-bastion" {
   type        = string
   description = "ami for bastion"
@@ -61,6 +66,11 @@ variable "bastion-sg" {
 variable "nginx-sg" {
   type = list
   description = "security group for nginx"
+}
+
+variable "web-sg" {
+  type = list
+  description = "security group for webservers"
 }
 
 variable "ami-nginx" {
