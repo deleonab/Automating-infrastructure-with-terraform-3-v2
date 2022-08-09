@@ -54,7 +54,7 @@ resource "aws_efs_mount_target" "subnet-1" {
 resource "aws_efs_mount_target" "subnet-2" {
   file_system_id  = aws_efs_file_system.ACS-efs.id
   subnet_id       = aws_subnet.private[3].id
-  security_groups = [aws_security_group.datalayer-sg.id]
+  security_groups = var.efs-sg
 }
 
 # create access point for wordpress
