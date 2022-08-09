@@ -42,7 +42,7 @@ resource "aws_launch_template" "nginx-launch-template" {
   vpc_security_group_ids = var.nginx-sg
 
   iam_instance_profile {
-    name = aws_iam_instance_profile.ip.id
+    name = var.instance_profile
   }
 
   key_name =  var.keypair
