@@ -43,6 +43,11 @@ variable "ami-bastion" {
   description = "ami for bastion"
 }
 
+variable "ami-web" {
+  type        = string
+  description = "ami for webservers"
+}
+
 variable "instance_profile" {
   type        = string
   description = "Instance profile for launch template"
