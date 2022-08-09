@@ -47,7 +47,7 @@ resource "aws_efs_file_system" "ACS-efs" {
 resource "aws_efs_mount_target" "subnet-1" {
   file_system_id  = aws_efs_file_system.ACS-efs.id
   subnet_id       = aws_subnet.private[2].id
-  security_groups = [aws_security_group.datalayer-sg.id]
+  security_groups = var.efs-sg
 }
 
 # set second mount target for the EFS 
