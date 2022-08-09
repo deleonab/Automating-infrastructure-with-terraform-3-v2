@@ -28,6 +28,11 @@ variable "public_subnets" {
   type = list
   description = "Seconf subnet for ecternal ALB"
 }
+variable "private_subnets" {
+  type = list
+  description = "first private subnets for internal ALB"
+}
+
 variable "tooling-alb-tgt" {
   type        = string
   description = "tooling target group"
@@ -53,6 +58,11 @@ variable "ami-web" {
   description = "ami for webservers"
 }
 
+variable "ami-nginx" {
+  type        = string
+  description = "ami for nginx"
+}
+
 variable "instance_profile" {
   type        = string
   description = "Instance profile for launch template"
@@ -73,12 +83,5 @@ variable "web-sg" {
   description = "security group for webservers"
 }
 
-variable "ami-nginx" {
-  type        = string
-  description = "ami for nginx"
-}
 
-variable "private_subnets" {
-  type = list
-  description = "first private subnets for internal ALB"
-}
+
