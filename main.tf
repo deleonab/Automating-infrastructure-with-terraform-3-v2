@@ -105,8 +105,8 @@ module "EFS" {
 
 module "RDS" {
   source          = "./modules/RDS"
-  db-password     = var.master-password
-  db-username     = var.master-username
+  db-password     = var.db-password
+  db-username     = var.db-username
   db-sg           = [module.security.datalayer-sg]
   private_subnets = [module.VPC.private_subnets-3, module.VPC.private_subnets-4]
 }

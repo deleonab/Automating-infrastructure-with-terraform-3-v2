@@ -1,3 +1,9 @@
+# Get list of availability zones
+data "aws_availability_zones" "available" {
+  state = "available"
+}
+
+
 #### creating sns topic for all the auto scaling groups
 resource "aws_sns_topic" "dele-sns" {
 name = "Default_CloudWatch_Alarms_Topic"
