@@ -1,3 +1,4 @@
+
 variable "region" {
 }
 
@@ -51,4 +52,3 @@ variable "name" {
 variable "environment" {
   default = "true"
 }
-
