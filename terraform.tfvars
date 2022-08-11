@@ -25,7 +25,8 @@ name = "Terraform"
 environment = "dev"
 
 keypair = "devops2"
-ami = "ami-035c5dc086849b5de"
+#ami = "ami-035c5dc086849b5de"
+ami = "ami-09e67e426f25ce0d7"
 
 account_no = "185439933271"
 
