@@ -2,12 +2,12 @@
 ##creating bucket for s3 backend
 #########################
 
-resource "aws_s3_bucket" "terraform-state" {
+resource "aws_s3_bucket" "terraform-state-file" {
   bucket = "pbl-test-18"
   force_destroy = true
 }
 resource "aws_s3_bucket_versioning" "version" {
-  bucket = aws_s3_bucket.terraform-state.id
+  bucket = aws_s3_bucket.terraform-state-file.id
   versioning_configuration {
     status = "Enabled"
   }
@@ -15,7 +15,7 @@ resource "aws_s3_bucket_versioning" "version" {
 
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "first" {
-  bucket = aws_s3_bucket.terraform-state.id
+  bucket = aws_s3_bucket.terraform-state-file.id
   rule {
     apply_server_side_encryption_by_default {
       sse_algorithm = "AES256"
