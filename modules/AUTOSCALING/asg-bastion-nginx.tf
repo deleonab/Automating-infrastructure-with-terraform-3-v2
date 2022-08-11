@@ -65,7 +65,7 @@ resource "aws_autoscaling_group" "nginx-asg" {
   min_size                  = 2
   health_check_grace_period = 300
   health_check_type         = "ELB"
-  desired_capacity          = 1
+  desired_capacity          = 2
 
   vpc_zone_identifier = var.public_subnets
 
